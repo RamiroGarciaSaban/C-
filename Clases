@@ -1,0 +1,49 @@
+//Clases en C++
+#include<iostream>
+#include<stdlib.h>
+
+using namespace std;
+
+// Dentro de las clases atributos y metodos.
+// Atributos = características.
+// Metodos = Acciones de este objeto
+// Constructores = tienen el mismo nombre de la clase.
+class Persona{
+    private: // Atributos
+        int edad;
+        string nombre;
+    public: // Metodos
+        Persona(int, string); // Constructor
+        void leer();
+        void correr();
+
+};
+// Constructor, nos sirve para inicializar los atributos.
+Persona::Persona(int _edad, string _nombre){
+    edad = _edad;
+    nombre = _nombre;
+}
+
+void Persona::leer(){
+    cout<<"Soy "<<nombre<<" y estoy leyendo un libro"<<endl;
+}
+
+void Persona::correr(){
+    cout<<"Soy "<<nombre<<" y estoy corriendo una maraton"<<endl;
+}
+
+
+int main(){
+    Persona p1 = Persona(20, "Alejandro");
+    Persona p2 = Persona(19, "Maria");
+    Persona p3 = Persona(21, "Juan");
+    
+    p1.leer();
+    p2.correr();
+    
+    p3.leer();
+    p3.correr();
+    
+    system("pause");
+    return 0;
+}
